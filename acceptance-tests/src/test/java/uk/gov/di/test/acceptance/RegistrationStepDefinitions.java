@@ -343,4 +343,15 @@ public class RegistrationStepDefinitions extends SignInStepDefinitions {
         enterPasswordField.sendKeys(tcPassword);
         findAndClickContinue();
     }
+
+    @When("the new user requests a new security code {int} times")
+    public void theNewUserRequestsANewSecurityCodeTimes(int newCodeRequest) {
+        for (int i = 0; i < newCodeRequest; i++) {
+            driver.findElement(By.cssSelector("#main-content > div > div > form > p > a")).click();
+            WebElement emailAddressField = driver.findElement(By.id("email"));
+            emailAddressField.clear();
+            emailAddressField.sendKeys(emailAddress);
+            findAndClickContinue();
+        }
+    }
 }

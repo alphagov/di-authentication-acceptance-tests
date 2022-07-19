@@ -28,4 +28,14 @@ public class NotLoggedInStepDefinitions extends SignInStepDefinitions {
     public void theNotLoggedInUserIsTakenToTheIdentityProviderLoginPage() {
         waitForPageLoadThenValidate(SIGN_IN_OR_CREATE);
     }
+
+    @Then("the new user is taken to the you cannot get a new security code at the moment page")
+    public void theNewUserIsTakenToTheYouCannotGetANewSecurityCodeAtTheMomentPage() {
+        waitForPageLoad("You cannot get a new security code at the moment");
+    }
+
+    @Then("the new user is taken to the you requested too many security codes page")
+    public void theNewUserIsTakenToTheYouRequestedTooManySecurityCodesPage() {
+        waitForPageLoad("You requested too many security codes - GOV.UK account");
+    }
 }
