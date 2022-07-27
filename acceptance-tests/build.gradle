@@ -12,7 +12,7 @@ repositories {
 }
 
 def dependencyVersions = [
-        junit_version: '5.8.2',
+        junit_version: '5.9.0',
         cucumber_version: '7.4.1',
         axe_version: '3.0',
         json_version: '20220320'
